@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science Project Timeline</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 5px;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            transform: scale(0.5);
+            transform-origin: top left;
+            width: 200%;
+            height: 200%;
+        }
+        
+        .gantt-container {
+            background: white;
+            border: 1px solid #ccc;
+            width: fit-content;
+        }
+        
+        .gantt-table {
+            border-collapse: collapse;
+            font-size: 10px;
+        }
+        
+        .week-header {
+            background: #4a5568;
+            color: white;
+            padding: 2px 4px;
+            text-align: center;
+            font-size: 9px;
+            font-weight: bold;
+            border: 1px solid #333;
+            width: 80px;
+            height: 25px;
+            vertical-align: middle;
+        }
+        
+        .task-label {
+            background: #2d3748;
+            color: white;
+            padding: 1px 4px;
+            font-size: 8px;
+            border: 1px solid #333;
+            width: 150px;
+            height: 20px;
+            vertical-align: middle;
+        }
+        
+        .gantt-cell {
+            width: 80px;
+            height: 20px;
+            border: 1px solid #ddd;
+            position: relative;
+            background: #f8f8f8;
+            padding: 0;
+        }
+        
+        .task-bar {
+            height: 16px;
+            margin: 2px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 7px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .setup, .research, .analysis, .define, .plan { background: #3182ce; }
+        .sources, .start, .process, .begin, .complete { background: #805ad5; }
+        .design, .build, .test, .results, .deploy, .document, .prepare { background: #e53e3e; }
+        .train, .validate, .analyze, .compare, .output, .integrate, .present { background: #38a169; }
+        
+        .milestone {
+            font-style: italic;
+            position: relative;
+        }
+        
+        .milestone::after {
+            content: '♦';
+            position: absolute;
+            right: 4px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #e53e3e;
+            font-size: 10px;
+        }
+        
+        .bottom-bar {
+            background: #38a169;
+            height: 16px;
+            margin: 2px;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gantt-container">
+        <table class="gantt-table">
+            <tr>
+                <td class="task-label">Task / Phase</td>
+                <td class="week-header">Week 1<br>Aug 27-Sep 2</td>
+                <td class="week-header">Week 2<br>Sep 3-Sep 9</td>
+                <td class="week-header">Week 3<br>Sep 10-Sep 16</td>
+                <td class="week-header">Week 4<br>Sep 17-Sep 23</td>
+                <td class="week-header">Week 5<br>Sep 24-Sep 30</td>
+                <td class="week-header">Week 6<br>Oct 1-Oct 7</td>
+                <td class="week-header">Week 7<br>Oct 8-Oct 14</td>
+            </tr>
+            <tr>
+                <td class="task-label">Project Initiation & Planning</td>
+                <td class="gantt-cell"><div class="task-bar setup">Setup</div></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+            </tr>
+            <tr>
+                <td class="task-label">Problem Statement & Literature Review</td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"><div class="task-bar research">Research</div></td>
+                <td class="gantt-cell"><div class="task-bar analysis">Analysis</div></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+            </tr>
+            <tr>
+                <td class="task-label">Data Source Identification</td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"><div class="task-bar sources">Sources</div></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+            </tr>
+            <tr>
+                <td class="task-label">Data Preprocessing & Cleaning</td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"><div class="task-bar start">Start</div></td>
+                <td class="gantt-cell"><div class="task-bar process">Process</div></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+            </tr>
+            <tr>
+                <td class="task-label">Exploratory Data Analysis (EDA)</td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"><div class="task-bar begin">Begin</div></td>
+                <td class="gantt-cell"><div class="task-bar complete">Complete</div></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+            </tr>
+            <tr>
+                <td class="task-label">Objectives & Scope Definition</td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"><div class="task-bar define">Define</div></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+            </tr>
+            <tr>
+                <td class="task-label">Project Plan & Timeline</td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"><div class="task-bar plan">Plan</div></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+            </tr>
+            <tr>
+                <td class="task-label milestone">MILESTONE 1: Phase 1 Review (Sep 11-12)</td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+            </tr>
+            <tr>
+                <td class="task-label">Methodology & Model Planning</td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"><div class="task-bar design">Design</div></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+            </tr>
+            <tr>
+                <td class="task-label">Pipeline Development & Structures</td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"><div class="task-bar build">Build</div></td>
+                <td class="gantt-cell"><div class="task-bar test">Test</div></td>
+                <td class="gantt-cell"></td>
+            </tr>
+            <tr>
+                <td class="task-label">Intermediate Results & Pipeline</td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"><div class="task-bar results">Results</div></td>
+                <td class="gantt-cell"></td>
+            </tr>
+            <tr>
+                <td class="task-label">Initial Deployment (50%)</td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"><div class="task-bar deploy">Deploy</div></td>
+                <td class="gantt-cell"></td>
+            </tr>
+            <tr>
+                <td class="task-label">Dataset Description & EDA Code</td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"><div class="task-bar document">Document</div></td>
+                <td class="gantt-cell"></td>
+            </tr>
+            <tr>
+                <td class="task-label">Presentation & Communication</td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"><div class="task-bar prepare">Prepare</div></td>
+                <td class="gantt-cell"></td>
+            </tr>
+            <tr>
+                <td class="task-label milestone">MILESTONE 2: Phase 2 Review (Sep 24-25)</td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+            </tr>
+            <tr>
+                <td class="task-label">Model Training & Validation</td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"><div class="task-bar train">Train</div></td>
+                <td class="gantt-cell"><div class="task-bar validate">Validate</div></td>
+            </tr>
+            <tr>
+                <td class="task-label">Final Results & Depth Analysis</td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"><div class="task-bar analyze">Analyze</div></td>
+                <td class="gantt-cell"><div class="task-bar results">Results</div></td>
+            </tr>
+            <tr>
+                <td class="task-label">Model Comparison & Output</td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"><div class="task-bar compare">Compare</div></td>
+                <td class="gantt-cell"><div class="task-bar output">Output</div></td>
+            </tr>
+            <tr>
+                <td class="task-label">Full Deployment & Integration</td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"><div class="task-bar deploy">Deploy</div></td>
+                <td class="gantt-cell"><div class="task-bar integrate">Integrate</div></td>
+            </tr>
+            <tr>
+                <td class="task-label">Future Enhancement Planning</td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"><div class="task-bar plan">Plan</div></td>
+            </tr>
+            <tr>
+                <td class="task-label">Final Presentation & Q&A</td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"></td>
+                <td class="gantt-cell"><div class="task-bar present">Present</div></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
