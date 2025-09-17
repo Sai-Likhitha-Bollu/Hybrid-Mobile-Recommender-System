@@ -1,0 +1,42 @@
+I want to build a project and now i will be giving clear instructions on what, how, and by when and what like and everything in this prompt
+
+EVERY FEATURE IS TAKEN INTO CONSIDERTION CAUSE IT MIGHT VARY FROM PERSON TO PERSON
+
+I am trying to build a hybrid recommender system for mobiles, where they would be following both collaborative filtering as well as content based filtering (feature selection) and i will be adding explainability, serendipity and contrarian, also bias detection
+
+build a clean structured dataset -> use apis to find the specs prices, ratings, launch dates, and derived features -> value for money score and battery to weight ratio
+
+explainability - y a phone is being recommended? if there are similar how did u chose this is the best for me? y should one buy this phone
+
+the layers or modules i wanna implement
+
+serendipity - not top ranked - to eliminate bias, niche brands with great features, lesser branding
+
+contrarian -> against the trend but offer unique value
+
+bias detection - over representation certian brands/specs, bias in spec scores/ pricing trends
+
+1. Scraping layer - getting the data and storin it into a csv, we will be using Indian centric mobiles (basically every mobile sold in india, yes every phone and it's model and brand, every company) 
+Scrape all the data to fit into features, make sure to read all the features of all the latest and preexisting model phones, features should inlcude every specification along with spec score for rating, to mitigate bias, i want the average for the model from all the apis  ( use 2 to 3 at max and then structure the data if the price is wrong or the specifications, find the apis closest to real life ones)store in single file
+
+2. Scheduler Layer - > idk the function but please make me explain
+
+3. Data Storage Layer - stores the data, can be csv or vectordb or rag, to retrieval basic models, to use data as wanted
+
+4. Processing layer - clean, normalize, enrich data
+
+5. Recommendation engine -> talks about explanability, Decision support transformers models or llms as i can't use hugging face, maybe flan or gemini api or grok api or something open source
+
+6. Frontend Layer -> could be flask or streamlit or even react, whatever it is
+
+7. Deployment Strategy -> Local deployment as of now, and maybe a CI/CD pipeline if can, but not docker, as deployment of any online source is prohibited.
+
+
+can add comparsion if that is what the user want. So it goes like datastorage ( RAG OR VECTORDB, FAISS ), For retrieval ->transformers model, t5 or flan, almini. Summarizer for explainability with confidence sscores
+
+
+the end product should suggest the top mobiles for the specifications the user has asked for and user login to store who is accessing what.
+
+this is the complete project now i want detailed plan and all the possible tech stack that needs and their alternatives 
+
+do a detailed research and give problems with the solution, if there is no problem then go ahead and help me build the project with documentation first
